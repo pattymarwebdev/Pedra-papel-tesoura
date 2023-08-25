@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 14px;
+     /* Adicionei o background com transparência */
+     background-image: url("./img/background.jpg");
+     background-size: cover; /* Garanti que a imagem de fundo cubra todo o container */
+     background-repeat: no-repeat; /* Impedi a repetição da imagem */
+     background-attachment: fixed; /* Mantive a imagem fixa enquanto a página rola */
+     opacity: 0.9; /* Define a transparência */
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 10px #0056b3;
+    border-style: ridge;
+    margin-bottom: 50px;
+
+}
+
+.choices {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.choice img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.choice {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choice:hover {
+    background-color: #0056b3;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#result {
+    font-size: 16px;
+
+    margin-top: 10px;
+    color: #4caf50;
+    position: static;
+}
+
+.footer {
+    margin-top: 50px;
+    position: fixed;
+    display: block;
+}
+
+.result-container {
+    margin-top: 50px;
+}
+
+.result-text {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #007bff;
+}
+
+#result {
+    margin-top: -40px;
+}
+
+.footer {
+    display: block;
+    left: 560px;
+
+
+}
+
+/* Estilos para os ícones de redes sociais */
+.footer a {
+    margin: 20px 10px;
+    /* Espaço horizontal entre os ícones */
+    color: #fcffff;
+    /* Cor dos ícones */
+    font-size: 24px;
+    /* Tamanho dos ícones */
+    text-decoration: none;
+    /* Removi os sublinhado nos links */
+
+}
+
+.footer a:hover {
+    color: #4caf50;
+    /* Cor ao passar o mouse sobre os ícones */
+}
+
+
+
+/* Adicionei um media query para estilos responsivos */
+@media screen and (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        /* Reduzi a largura do container */
+        max-width: 400px;
+        /* Defini uma largura máxima para telas menores */
+    }
+
+    .choices {
+        flex-direction: column;
+        /* Alterei para exibir verticalmente */
+        align-items: center;
+    }
+
+    .choice {
+        margin: 10px 0;
+    }
+
+    .result-text {
+        font-size: 14px;
+        /* Reduzi o tamanho do texto de resultado */
+        margin-top: 5px;
+        /* Reduzi o espaçamento do topo */
+    }
+
+    .footer {
+        margin-top: 20px;
+        /* Reduzi o espaçamento do rodapé */
+    }
+}
+@keyframes glowing {
+    0% {
+        color: #ea00ff;
+        text-shadow: none;
+    }
+    50% {
+        color: #0056b3;
+        text-shadow: 0 0 10px #58e758, 0 0 20px #e2ec55, 0 0 30px #0056b3;
+    }
+    100% {
+        color: #007bff;
+        text-shadow: none;
+    }
+}
+
+h1 {
+    font-size: 32px; /* Aumentei o tamanho do título */
+    font-weight: bold;
+    animation: glowing 2s linear infinite; /* Apliquei a animação de brilho */
+}
